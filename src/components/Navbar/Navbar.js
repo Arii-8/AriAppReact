@@ -1,81 +1,54 @@
 import React from 'react';
-import { View, ScrollView, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { useNavigation } from "@react-navigation/native";
 
-import { GetStarted } from "../../GetStarted/GetStarted";
+import GetStarted from "../../GetStarted/GetStarted";
 import { Home } from "../../Home/Home";
 import { About } from "../../About/About";
 
 const Tab = createBottomTabNavigator();
 
-// Screens names
-const GetStartedName = 'GetStarted';
-const HomeName = 'Home';
-const AboutName = 'About';
-
-export function Navbar() {
-  const navigation = useNavigation();
-
-  function handlePressGetStarted() {
-    navigation.navigate(GetStartedName); // Pindah ke halaman GetStarted
-  }
-
-  function handlePressHome() {
-    navigation.navigate(HomeName); // Pindah ke halaman Home
-  }
-
-  function handlePressAbout() {
-    navigation.navigate(AboutName); // Pindah ke halaman About
-  }
+export function Navbar({route}) {
 
   return (
-    <View style={styles.container}>
-      <Tab.Navigator initialRouteName={GetStartedName}>
+      <Tab.Navigator initialRouteName={'getstarted'}>
         <Tab.Screen
-          name={GetStartedName}
+          name={'getstarted'}
           component={GetStarted}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <TouchableOpacity onPress={handlePressGetStarted}>
                 <Image
                   source={require("../../../assets/home1.png")}
                   style={{ width: size, height: size, tintColor: color }}
                 />
-              </TouchableOpacity>
             ),
           }}
         />
         <Tab.Screen
-          name={HomeName}
+          name={'home'}
           component={Home}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <TouchableOpacity onPress={handlePressHome}>
                 <Image
                   source={require("../../../assets/book1.png")}
                   style={{ width: size, height: size, tintColor: color }}
                 />
-              </TouchableOpacity>
             ),
           }}
         />
         <Tab.Screen
-          name={AboutName}
+          name={'about'}
           component={About}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <TouchableOpacity onPress={handlePressAbout}>
                 <Image
                   source={require("../../../assets/people1.png")}
                   style={{ width: size, height: size, tintColor: color }}
                 />
-              </TouchableOpacity>
             ),
           }}
         />
       </Tab.Navigator>
-    </View>
   );
 }
 

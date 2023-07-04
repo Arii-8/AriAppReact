@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Dimensions, TextInput } from "react-native";
-import { Navbar } from '../components/Navbar/Navbar';
 // import { Searchbar } from 'react-native-paper';
 
 // fungsi utama pada komponen halaman home
@@ -96,10 +95,6 @@ export function Home(){
                     </TouchableOpacity>
                 </View>
             </ScrollView>
-
-            <View>
-                <Navbar/>
-            </View>
         </>
     );
 }

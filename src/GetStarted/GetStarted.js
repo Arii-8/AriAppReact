@@ -2,7 +2,7 @@ import React from 'react';
 import {  StyleSheet, Dimensions, ScrollView, TouchableOpacity, Image, View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export function GetStarted(){
+const GetStarted=function GetStarted(){
     const navigation = useNavigation();
     
     function handlePress(){
@@ -61,3 +61,5 @@ const style = StyleSheet.create({
         textAlign: 'center',
     },
 })
+
+export default GetStarted;

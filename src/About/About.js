@@ -1,6 +1,5 @@
 import { Linking, StyleSheet, Text, TouchableOpacity, View, Image, Dimensions, ScrollView, } from "react-native";
 import React from "react";
-import { Navbar } from "../components/Navbar/Navbar";
 // import LinearGradient from "react-native-linear-gradient";
   
   export function About(){
@@ -106,10 +105,6 @@ import { Navbar } from "../components/Navbar/Navbar";
           </View>
         </View>
         </ScrollView>
-
-          <View>
-            <Navbar/>
-          </View>
       </>
     );
   };

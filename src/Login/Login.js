@@ -8,7 +8,8 @@ export function Login(){
     const navigation = useNavigation();
     
     function handlePressHome(){
-        navigation.navigate('Home'); // Pindah menuju halaman home
+        console.log('chec')
+        navigation.navigate('User'); // Pindah menuju halaman home
     }
 
     function handlePressRegister(){
