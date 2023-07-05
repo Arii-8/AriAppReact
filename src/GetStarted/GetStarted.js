@@ -2,6 +2,7 @@ import React from 'react';
 import {  StyleSheet, Dimensions, ScrollView, TouchableOpacity, Image, View, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+// Halaman Get Started
 const GetStarted=function GetStarted(){
     const navigation = useNavigation();
     

@@ -2,6 +2,7 @@ import { Linking, StyleSheet, Text, TouchableOpacity, View, Image, Dimensions, S
 import React from "react";
 // import LinearGradient from "react-native-linear-gradient";
   
+// Halaman About
   export function About(){
     return (
       <>
