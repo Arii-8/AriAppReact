@@ -1,4 +1,4 @@
-import { Linking, StyleSheet, Text, TouchableOpacity, View, Image, Dimensions, ScrollView, } from "react-native";
+import { Linking, StyleSheet, Text, TouchableOpacity, View, Image, Dimensions, ScrollView, SafeAreaView } from "react-native";
 import React from "react";
 // import LinearGradient from "react-native-linear-gradient";
   
@@ -70,37 +70,37 @@ import React from "react";
             <View style={{marginTop: 50,}}>
                 <View style={{flexDirection: 'row', justifyContent: 'center', marginLeft: -4, }}>
                   <Image style={styles.imgStyle2} source={require("../../assets/profilarizal.png")} />
-                  <Text style={{marginTop: 30, fontSize: 23,}}> Arizal Sabila Nurhikam </Text>
+                  <Text style={{marginTop: 30, fontSize: 23, color: 'grey'}}> Arizal Sabila Nurhikam </Text>
                 </View>
 
                 <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -30,}}>
                   <Image style={styles.imgStyle2} source={require("../../assets/profilnabila.png")} />
-                  <Text style={{marginTop: 30, fontSize: 23,}}> Nabilla Putri Sahara </Text>
+                  <Text style={{marginTop: 30, fontSize: 23, color: 'grey'}}> Nabilla Putri Sahara </Text>
                 </View>
 
-                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -62,}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -57,}}>
                   <Image ge style={styles.imgStyle2} source={require("../../assets/profilgiri.png")} />
-                  <Text style={{marginTop: 30, fontSize: 23,}}> Giri Van Transco </Text>
+                  <Text style={{marginTop: 30, fontSize: 23, color: 'grey'}}> Giri Van Transco </Text>
                 </View>
 
-                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -116,}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -105,}}>
                   <Image style={styles.imgStyle2} source={require("../../assets/profilniki.png")} />
-                  <Text style={{marginTop: 30, fontSize: 23,}}> Niki Marco </Text>
+                  <Text style={{marginTop: 30, fontSize: 23, color: 'grey'}}> Niki Marco </Text>
                 </View>
 
-                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: 20,}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: 14,}}>
                   <Image style={styles.imgStyle2} source={require("../../assets/profilirgi.png")} />
-                  <Text style={{marginTop: 30, fontSize: 23,}}> Irgi Mahendrata Saputra </Text>
+                  <Text style={{marginTop: 30, fontSize: 23, color: 'grey'}}> Irgi Mahendrata Saputra </Text>
                 </View>
 
-                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -82,}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -78,}}>
                   <Image style={styles.imgStyle2} source={require("../../assets/profilvina.png")} />
-                  <Text style={{marginTop: 30, fontSize: 23,}}> Vina Agustina </Text>
+                  <Text style={{marginTop: 30, fontSize: 23, color: 'grey'}}> Vina Agustina </Text>
                 </View>
 
-                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -37,}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20, marginLeft: -36, marginBottom: 40,}}>
                   <Image style={styles.imgStyle2} source={require("../../assets/profilhadi.png")} />
-                  <Text style={{marginTop: 30, fontSize: 23,}}> Hadi Mirojul Falah </Text>
+                  <Text style={{marginTop: 30, fontSize: 23, color: 'grey'}}> Hadi Mirojul Falah </Text>
                 </View>
             </View>          
           </View>

@@ -5,16 +5,30 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import GetStarted from "../../GetStarted/GetStarted";
 import { Home } from "../../Home/Home";
 import { About } from "../../About/About";
+import { Read } from '../../Read/Read';
 
 const Tab = createBottomTabNavigator();
 
 export function Navbar({route}) {
 
   return (
-      <Tab.Navigator initialRouteName={'getstarted'}>
+      // <Tab.Navigator initialRouteName={'getstarted'}>
+      //   <Tab.Screen
+      //     name={'getstarted'}
+      //     component={GetStarted}
+      //     options={{
+      //       tabBarIcon: ({ color, size }) => (
+      //           <Image
+      //             source={require("../../../assets/home1.png")}
+      //             style={{ width: size, height: size, tintColor: color }}
+      //           />
+      //       ),
+      //     }}
+      //   />
+      <Tab.Navigator initialRouteName={'home'}>
         <Tab.Screen
-          name={'getstarted'}
-          component={GetStarted}
+          name={'Home'}
+          component={Home}
           options={{
             tabBarIcon: ({ color, size }) => (
                 <Image
@@ -25,8 +39,8 @@ export function Navbar({route}) {
           }}
         />
         <Tab.Screen
-          name={'home'}
-          component={Home}
+          name={'Read'}
+          component={Read}
           options={{
             tabBarIcon: ({ color, size }) => (
                 <Image
@@ -37,7 +51,7 @@ export function Navbar({route}) {
           }}
         />
         <Tab.Screen
-          name={'about'}
+          name={'About'}
           component={About}
           options={{
             tabBarIcon: ({ color, size }) => (

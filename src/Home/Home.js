@@ -1,21 +1,38 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Dimensions, TextInput } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Dimensions, TextInput, SafeAreaView } from "react-native";
 // import { Searchbar } from 'react-native-paper';
 
 // fungsi utama pada komponen halaman home
 export function Home(){
     // setState value untuk search bar
     const [value, onChangeText] = React.useState('');
+    const inputStyle = {
+        backgroundColor: value ? 'lightgrey' : 'lightgrey',
+        paddingLeft: 20,
+        borderRadius: 40,
+        color: 'black',
+      };
 
     return(
         <>
             <ScrollView style={{backgroundColor: 'white'}}>
 
             {/* Search Bar */}
-            <View style={style.searchBar}>
+            {/* <View style={style.searchBar}> */}
                 {/* <Searchbar placeholder="Search" onChangeText={onChangeSearch} value={searchQuery} /> */}
-                <TextInput  style={{backgroundColor: value, paddingLeft: 20, color: 'black'}} placeholder=' Search...' editable multiline onChangeText={text => onChangeText(text)} value={value} />
-            </View>
+                {/* <TextInput  style={{backgroundColor: value, paddingLeft: 20, color: 'black'}} placeholder=' Search...' editable multiline onChangeText={text => onChangeText(text)} value={value} /> */}
+            {/* </View> */}
+
+                <View style={style.searchBar}>
+                    <TextInput
+                        style={[inputStyle, {color: 'black'}]}
+                        placeholder=' Search...'
+                        editable
+                        multiline
+                        onChangeText={text => onChangeText(text)}
+                        value={value}
+                    />
+                </View>
 
             {/* Content Heding Text*/}
             <View style={{margin: 10, marginLeft: 25}}>
@@ -26,7 +43,7 @@ export function Home(){
                 <View>
                     <TouchableOpacity style={style.elemenCard}>
                         <Image style={style.imageCard} source={require("../../assets/img/deborath-ramos-l-W-A9i4Mwx-A-unsplash.jpg")} />
-                        <Text style={style.textHeading}> BERKEMBANGNYA ERA MANUFAKTUR TEKNOLOGI INDUSTRI </Text>
+                        <Text style={style.textHeading}>BERKEMBANGNYA ERA MANUFAKTUR TEKNOLOGI INDUSTRI </Text>
                         <Text style={style.timeCard}> 17 Juni 2022 </Text>
                         <Text style={style.categoriCard}> Manufaktur </Text>
                     </TouchableOpacity>
@@ -35,7 +52,7 @@ export function Home(){
                 <View>
                     <TouchableOpacity style={style.elemenCard}>
                         <Image style={style.imageCard} source={require("../../assets/img/aron-van-de-pol-tZDtyUrYrFU-unsplash.jpg")} />
-                        <Text style={style.textHeading}> PEMILIHAN RAJA BARU DI INGGRIS </Text>
+                        <Text style={style.textHeading}>PEMILIHAN RAJA BARU DI INGGRIS </Text>
                         <Text style={style.timeCard}> 17 Juni 2022 </Text>
                         <Text style={style.categoriCard}> Manufaktur </Text>
                     </TouchableOpacity>
@@ -43,8 +60,26 @@ export function Home(){
 
                 <View>
                     <TouchableOpacity style={style.elemenCard}>
+                        <Image style={style.imageCard} source={require("../../assets/img/ezgif.com-webp-to-jpg.jpg")} />
+                        <Text style={style.textHeading}>BEGINI WUJUD MANUSIA di TAHUN 3000, BIKIN MERINDING </Text>
+                        <Text style={style.timeCard}> 23 Juli 2023 </Text>
+                        <Text style={style.categoriCard}> Technology </Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View>
+                    <TouchableOpacity style={style.elemenCard}>
+                        <Image style={style.imageCard} source={require("../../assets/img/kekeringan-horor-di-spanyol-selatan-ribuan-orang-tanpa-air-minum-1_169.jpeg")} />
+                        <Text style={style.textHeading}>BMKG INGATKAN ANCAMAN GAGAL PANEN IMBAS EL NINO </Text>
+                        <Text style={style.timeCard}> 22 Juli 2023 </Text>
+                        <Text style={style.categoriCard}> Cuaca </Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View>
+                    <TouchableOpacity style={style.elemenCard}>
                         <Image style={style.imageCard} source={require("../../assets/img/gracia-dharma-qTlbO6mkQH0-unsplash.jpg")} />
-                        <Text style={style.textHeading}> TIPS MENEMUKAN HOBBI UNTUK KESENANGAN </Text>
+                        <Text style={style.textHeading}>TIPS MENEMUKAN HOBBI UNTUK KESENANGAN </Text>
                         <Text style={style.timeCard}> 2 Mei 2022 </Text>
                         <Text style={style.categoriCard}> Passion </Text>
                     </TouchableOpacity>
@@ -52,8 +87,17 @@ export function Home(){
 
                 <View>
                     <TouchableOpacity style={style.elemenCard}>
+                        <Image style={style.imageCard} source={require("../../assets/img/telkomsel-munculin-lagi-veronika-kini-pakai-chatgpt_169.jpeg")} />
+                        <Text style={style.textHeading}>TELKOMSEL VERONIKA BANGKIT KEMBALI, DIKLAIM LEBIH HUMANIS EFEK CHATGPT</Text>
+                        <Text style={style.timeCard}> 21 Juli 2023 </Text>
+                        <Text style={style.categoriCard}> Technology </Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View>
+                    <TouchableOpacity style={style.elemenCard}>
                         <Image style={style.imageCard} source={require("../../assets/img/tianshu-liu-aqZ3UAjs_M4-unsplash.jpg")} />
-                        <Text style={style.textHeading}> HARGA TIKET PERGI BERLIBUR KE OSAKA JEPANG </Text>
+                        <Text style={style.textHeading}>HARGA TIKET PERGI BERLIBUR KE OSAKA JEPANG </Text>
                         <Text style={style.timeCard}> 17 Agustus 2022 </Text>
                         <Text style={style.categoriCard}> Wisata </Text>
                     </TouchableOpacity>
@@ -71,7 +115,7 @@ export function Home(){
                 <View>
                     <TouchableOpacity style={style.elemenCard}>
                         <Image style={style.imageCard} source={require("../../assets/img/Tol-Cisumdawu.jpeg")} />
-                        <Text style={style.textHeading}> TARIF TOL CISUMDAWU (CILEUNYI SUMEDANG) 2023, TAK GRATIS LAGI! </Text>
+                        <Text style={style.textHeading}>TARIF TOL CISUMDAWU (CILEUNYI SUMEDANG) 2023, TAK GRATIS LAGI! </Text>
                         <Text style={style.timeCard}> 28 Februari 2023 </Text>
                         <Text style={style.categoriCard}> Manufaktur </Text>
                     </TouchableOpacity>
@@ -80,7 +124,7 @@ export function Home(){
                 <View>
                     <TouchableOpacity style={style.elemenCard}>
                         <Image style={style.imageCard} source={require("../../assets/img/neermana-studio-SYKYxuT2o5w-unsplash.jpg")} />
-                        <Text style={style.textHeading}> BANDUNG SEPI SAAT PANDEMI COVID-19 </Text>
+                        <Text style={style.textHeading}>BANDUNG SEPI SAAT PANDEMI COVID-19 </Text>
                         <Text style={style.timeCard}> 17 Maret  2022 </Text>
                         <Text style={style.categoriCard}> Wisata </Text>
                     </TouchableOpacity>
@@ -89,7 +133,7 @@ export function Home(){
                 <View>
                     <TouchableOpacity style={style.elemenCard}>
                         <Image style={style.imageCard} source={require("../../assets/img/annie-spratt-QckxruozjRg-unsplash.jpg")} />
-                        <Text style={style.textHeading}> BERKEMBANGNYA BIDANG PERUSAHAAN START UP </Text>
+                        <Text style={style.textHeading}>BERKEMBANGNYA BIDANG PERUSAHAAN START UP </Text>
                         <Text style={style.timeCard}> 14 Februari 2022 </Text>
                         <Text style={style.categoriCard}> Start-Up </Text>
                     </TouchableOpacity>
@@ -113,9 +157,11 @@ const style = StyleSheet.create({
         padding: 2,
         borderWidth: 2,
         borderRadius: 40,
-        borderColor: '#adadad',
+        borderColor: 'lightgrey',
         // textShadowColor: 'black',
-        backgroundColor: '#adadad',
+        // backgroundColor: '#adadad',
+        backgroundColor: 'lightgrey',
+        color: 'black',
     },
     imageContent: {
         borderWidth: 1,
